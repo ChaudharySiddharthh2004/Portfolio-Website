@@ -1,0 +1,655 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+/* Default (hidden in mobile) */
+/* Header */
+/* header {
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+} */
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2563eb;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* cv downloader button css code */
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 7px;
+  padding: 12px 18px;
+  background: #2563eb;            /* blue */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font: 600 16px/1 "Segoe UI", sans-serif;
+  cursor: pointer;
+  transition: transform 0.08s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+.btn-cv:hover {
+  background: #1e4fd6;            /* darker blue on hover */
+  transform: translateY(-1px);
+}
+
+.btn-cv:active {
+  transform: translateY(0);
+}
+
+.btn-cv:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35);
+}
+
+.btn-cv:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  font-size: 18px;                 /* simple icon size */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background: #fff;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: right 0.4s ease;
+  }
+
+  .nav-links.active {
+    right: 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* image container */
+.img-container
+{
+  border-radius: 11px;
+  height: 25rem;
+  width: 21rem;
+}
+.img-container img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* fills container, crops if necessary */
+  cursor: pointer;
+ 
+}
+/* this css is for the exp container for the experiance */
+.exp-experiance
+{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: #2563eb
+}
+.first-cont
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  padding: 50px 20px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 700px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.763);
+}
+
+.hero-text h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+.highlight
+{
+  color: gray;
+}
+
+.hero-text p {
+  color:rgba(0, 0, 0, 0.893) ;
+  font-size: 1rem;
+}
+/* reasponsive skills section card container */
+.skills-section {
+  padding: 30px 20px;
+  background: #f9f9f9; /* light theme background */
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card i {
+  font-size: 2rem;
+  color: #2563eb; /* primary theme color */
+  margin-bottom: 10px;
+}
+
+.skill-card h3 {
+  font-size: 1rem;
+  color: #333;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  /* background: white; */
+  border-top: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: bl;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-left: 15px;
+  color: #333;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background: #fff;
+    width: 220px;
+    padding: 20px;
+    transition: 0.4s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    width: 180px;
+  }
+  /* image container */
+.img-container
+{
+  border-radius: 11px;
+  height: 25rem;
+  width: 21rem;
+  margin-bottom: 1rem;
+}
+.img-container img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* fills container, crops if necessary */
+  cursor: pointer;
+ 
+}
+}
+/* this css is for the about section */
+.about-section {
+      max-width: 1100px;
+      margin: auto;
+      margin-top: 5rem;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .about-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 7px;
+      margin-bottom: 32px;
+    }
+
+    .about-container {
+       
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    /* Left side */
+    .bio h3, .education h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .bio p {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .education-item {
+      margin-bottom: 15px;
+    }
+
+    .education-item h4 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .education-item p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* Right side */
+    .skills h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .skill-category {
+      margin-bottom: 20px;
+    }
+
+    .skill-category h4 {
+      color: #0077ff;
+      margin-bottom: 10px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 6px 12px;
+      background: #f0f4ff;
+      color: #333;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      border: 1px solid #d0d8f0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+      .about-title {
+        font-size: 1.6rem;
+      }
+    }
+    /* this css code for the contact me section */
+    
+
+
+/* Submit Button */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: #1e4fd6;
+}
+
+#status {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Cards Styling */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+.card {
+  background: #fff;
+  padding: 15px 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards-container {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+}
+/* Contact Info */
+.contact-info {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 250px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-box i {
+  font-size: 1.3rem;
+  color: #0073e6;
+}
+
+.info-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    margin-top: 20px;
+  }
+   /* this css is for the exp container for the experiance */
+.exp-experiance
+{
+  display: flex;
+  font-size: 9px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.first-cont
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+}
+@media (max-width: 425px) {
+ /* this css is for the exp container for the experiance */
+.exp-experiance
+{
+  display: flex;
+  font-size: 9px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.first-cont
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+}
+@media (max-width: 1024px) {
+  .img-container
+{
+  border-radius: 11px;
+  height: 23rem;
+  width: 20rem;
+}
+.img-container img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* fills container, crops if necessary */
+ 
+}
+ /* this css is for the exp container for the experiance */
+.exp-experiance
+{
+  display: flex;
+  font-size: 9px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.first-cont
+{
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+}
+/* project section css starts from here */
+.card-container {
+  display: flex;            /* makes children sit in a row */
+  gap: 1rem;                /* space between cards */
+  justify-content: center;  /* center4align horizontally */
+  align-items: flex-start;  /* align top edges */
+  margin-top: 10rem;
+  flex-wrap: wrap;          /* allows wrapping on small screens */
+  /* border: 5px solid black;  just for debugging */
+  padding: 1rem;
+}

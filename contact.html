@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.contact-container {
+  display: flex;
+  margin-top: 4rem;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+form label {
+  display: block;
+  font-weight: 500;
+  margin: 10px 0 5px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #2563eb;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 0.7;
+  min-width: 250px;
+}
+
+.card {
+  display: block;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 18px rgba(0,0,0,0.15);
+  color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* css rules for toggling and hiding navbar  */
+header {
+  width: 100%;
+  padding: 15px 30px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2563eb;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Responsive nav for small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+</style>
+<body>
+  <header>
+    <div class="logo">🌟 <span>SIDDHARTH PORTFOLIO</span></div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+  <section class="contact-container">
+    <div class="form-box">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <label>Contact Number</label>
+        <input type="tel" name="contact" placeholder="Enter your number" required>
+
+        <label>Gender</label>
+        <select name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label>Message</label>
+        <textarea name="message" rows="4" placeholder="Write your message"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="contact-cards">
+      <a href="https://github.com/" target="_blank" class="card">🔗 GitHub Profile</a>
+      <a href="https://linkedin.com/" target="_blank" class="card">💼 LinkedIn Profile</a>
+      <a href="mailto:example@gmail.com" class="card">📧 siddharthchaudhary9818@gmail.com</a>
+    </div>
+  </section>
+ <script>
+  const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+
+  // Toggle icon between bars and X
+  const icon = hamburger.querySelector("i");
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-times");
+});
+  //////
+  // Replace with your own Google Apps Script deployment link
+const scriptURL = "https://script.google.com/macros/s/AKfycbzNGm6lvnsCwNIhs0QDpA5nyWkMTK0tHbNJJAPRPQEBguntA_tWT6bN6fy_7GI5dYLs/exec";
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then(response => {
+      alert("Form submitted successfully!");
+      form.reset();
+    })
+    .catch(error => {
+      alert("Error! " + error.message);
+    });
+});
+ </script>
+</body>
+</html>
