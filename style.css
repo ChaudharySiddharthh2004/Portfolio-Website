@@ -217,6 +217,7 @@ header {
     .bounce{
       animation: bounceY 1s infinite;
       font-weight: bold;
+      font-size: 1rem;
     }
     @keyframes bounceY {
       0%,100% { transform: translateY(0); }
@@ -663,4 +664,5 @@ footer p {
   /* border: 5px solid black;  just for debugging */
   padding: 1rem;
 }
+
 
