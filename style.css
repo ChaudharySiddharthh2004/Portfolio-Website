@@ -212,6 +212,16 @@ header {
   color:rgba(0, 0, 0, 0.893) ;
   font-size: 1rem;
 }
+/* bouncing animation css code */
+ /* Bounce */
+    .bounce{
+      animation: bounceY 1s infinite;
+      font-weight: bold;
+    }
+    @keyframes bounceY {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
 /* reasponsive skills section card container */
 .skills-section {
   padding: 30px 20px;
@@ -653,3 +663,4 @@ footer p {
   /* border: 5px solid black;  just for debugging */
   padding: 1rem;
 }
+
