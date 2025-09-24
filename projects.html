@@ -10,6 +10,43 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+ <style>
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      background: #000000;
+      border-radius: 50%;
+      animation: float linear infinite;
+    }
+
+    /* Random particles */
+    .particle:nth-child(1) { width: 10px; height: 10px; left: 10%; animation-duration: 12s; }
+    .particle:nth-child(2) { width: 6px; height: 6px; left: 30%; animation-duration: 18s; }
+    .particle:nth-child(3) { width: 8px; height: 8px; left: 50%; animation-duration: 15s; }
+    .particle:nth-child(4) { width: 5px; height: 5px; left: 70%; animation-duration: 20s; }
+    .particle:nth-child(5) { width: 12px; height: 12px; left: 90%; animation-duration: 25s; }
+
+    @keyframes float {
+      0% { top: 100%; opacity: 0; }
+      50% { opacity: 1; }
+      100% { top: -10%; opacity: 0; }
+    }
+
+    .content {
+      text-align: center;
+      z-index: 1;
+    }
+    .content h1 { font-size: 2.5rem; color: #222; }
+    .content p { font-size: 1.2rem; color: #555; }
+  </style>
 <body>
      <header>
     <div class="logo">🌟 <span>SIDDHARTH PORTFOLIO</span></div>
@@ -29,6 +66,13 @@
     </div>
   </header>
   <main>
+         <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
     <div class="card-container">
   <!-- First card -->
   <div class="card" style="width: 18rem;">
@@ -69,3 +113,4 @@
 </body>
 
 </html>
+
